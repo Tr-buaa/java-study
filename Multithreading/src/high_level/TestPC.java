@@ -79,7 +79,7 @@ class SynContainer {
     public synchronized Chicken pop() {
         if (count == 0) {
             try {
-                wait();
+                this.wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
